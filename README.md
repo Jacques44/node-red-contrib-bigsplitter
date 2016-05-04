@@ -3,6 +3,7 @@ node-red-node-splitter
 
 This node iterates over an array.
 Original work by Leon van Kammen, http://coderofsalvation.github.io / http://github.com/coderofsalvation
+
 "big" tweak by me
 
 # The original work and idea
@@ -17,9 +18,6 @@ In order to get the information over the start and the end, I've made some tweak
 ![alt tag](https://cloud.githubusercontent.com/assets/18165555/15009275/c9a91ee4-11e5-11e6-9797-5d09d30e9eef.PNG)
 ![alt tag](https://cloud.githubusercontent.com/assets/18165555/15009274/c99e50ea-11e5-11e6-863e-9d57a1317136.PNG)
 
-# The original help for node-red-contrib-splitter
-
-In enterprise integration patterns there are many names for this: a splitter, sequencer, iterator or chunkifier.
 
 # Here is the original help and documentation from Leon van Kammen
 
