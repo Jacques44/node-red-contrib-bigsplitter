@@ -1,0 +1,28 @@
+{
+  "bugs": {
+    "url": "https://github.com/Jacques44/node-red-contrib-bigsplitter/issues"
+  },
+  "dependencies": {},
+  "description": "A Node-RED node to split arrays into seperate messages, making it easy to loop over with control messages. Original work by Leon van Kammen",
+  "homepage": "https://github.com/Jacques44/node-red-contrib-bigsplitter/issues",
+  "keywords": [
+    "arrays",
+    "iteration",
+    "loop",
+    "node-red",
+    "bigsplitter",
+    "bignode"
+  ],
+  "license": "BSD",
+  "name": "node-red-contrib-bigsplitter",
+  "node-red": {
+    "nodes": {
+      "bigsplitter": "bigsplitter.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderofsalvation/node-red-contrib-bigsplitter.git"
+  },
+  "version": "1.0.0"
+}
