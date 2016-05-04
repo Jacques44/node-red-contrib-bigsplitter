@@ -49,13 +49,17 @@ module.exports = function(RED) {
               var nb = prop.length;
               var cur = 0;
               var last = 0;
-              node.send(null, { control: { state: "start", start: new Date() }})
+              var topic = msg.topic;
+              node.send([null, { control: { state: "start", start: new Date() }}])
               node.status({ fill: "yellow", text: "streaming", shape: "ring" })
 
               for( var i in prop ){
+/*
                 var m = RED.util.cloneMessage(msg);
                 m.payload = prop[i];
-                node.send( m );
+                m.topic = topic;
+*/
+                node.send( { topic: topic, payload: prop[i] } );
 
                 cur++;
                 // not too many UI updates
@@ -66,11 +70,12 @@ module.exports = function(RED) {
               }
 
               // Addon to send an end control message
-              node.send(null, { control: { state: "end", end: new Date(), elements: nb }})
+              node.send([null, { control: { state: "end", end: new Date(), elements: nb }}])
               node.status({ fill: "green", text: "done sending " + nb, shape: "ring" })
             }
           }else console.error("node splitter did not receive an array");
         });
     }
     RED.nodes.registerType("bigsplitter", SplitterNode);
+
 }
